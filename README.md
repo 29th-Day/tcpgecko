@@ -1,4 +1,4 @@
-[To be made...]
+This should really be a fork but I need to fork aRAMa and therefore I save this for later as its own seperate repo.
 
 # Credits
 **dimok** for the Homebrew Launcher project engine/base  
