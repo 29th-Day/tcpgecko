@@ -16,6 +16,7 @@
 #include <vpad/input.h>
 #include <coreinit/internal.h>
 #include <sysapp/launch.h>
+#include <whb/log_udp.h>
 
 #include "../kernel/kernel_functions.h"
 // #include "../system/memory.h"
@@ -97,16 +98,19 @@ int Menu_Main(void)
 	// InitVPadFunctionPointers();
 	// InitSysFunctionPointers();
 
-	if (strcasecmp("men.rpx", cosAppXmlInfoStruct.rpx_name) == 0)
-	{
-		return EXIT_RELAUNCH_ON_LOAD;
-	}
-	else if (strlen(cosAppXmlInfoStruct.rpx_name) > 0 &&
-		strcasecmp("ffl_app.rpx", cosAppXmlInfoStruct.rpx_name) != 0)
-	{
+	// if (strcasecmp("men.rpx", cosAppXmlInfoStruct.rpx_name) == 0)
+	// {
+	// 	return EXIT_RELAUNCH_ON_LOAD;
+	// }
+	// else if (strlen(cosAppXmlInfoStruct.rpx_name) > 0 &&
+	// 	strcasecmp("ffl_app.rpx", cosAppXmlInfoStruct.rpx_name) != 0)
+	// {
 
-		return EXIT_RELAUNCH_ON_LOAD;
-	}
+	// 	return EXIT_RELAUNCH_ON_LOAD;
+	// }
+
+	WHBLogUdpInit();
+	WHBLogPrintf("%s", __PRETTY_FUNCTION__);
 
 	//! *******************************************************************
 	//! *                     Setup EABI registers                        *
@@ -198,14 +202,14 @@ int Menu_Main(void)
 		}
 		else if (pressedButtons & VPAD_BUTTON_A)
 		{
-			install();
+			// install();
 			launchMethod = TCP_GECKO;
 
 			break;
 		}
 		else if (pressedButtons & VPAD_BUTTON_X)
 		{
-			install();
+			// install();
 			launchMethod = TCP_GECKO;
 			areSDCheatsEnabled = true;
 

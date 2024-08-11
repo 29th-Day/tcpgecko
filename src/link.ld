@@ -33,6 +33,7 @@ SECTIONS {
 		__bss_end = .;
 	}
 	__CODE_END = .;
+	__end__ = .;
 
 	/DISCARD/ : {
 		*(*);

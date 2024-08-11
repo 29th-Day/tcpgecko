@@ -237,17 +237,17 @@ void KernelSetupSyscalls(void)
 	kern_write((void*)(OS_SPECIFICS->addr_KernSyscallTbl4 + (0x25 * 4)), (unsigned int)KernelCopyData);
 	kern_write((void*)(OS_SPECIFICS->addr_KernSyscallTbl5 + (0x25 * 4)), (unsigned int)KernelCopyData);
 
-	//! write our hook to the
-	u32 addr_my_PrepareTitle_hook = ((u32)my_PrepareTitle_hook) | 0x48000003;
-	DCFlushRange(&addr_my_PrepareTitle_hook, sizeof(addr_my_PrepareTitle_hook));
+	// //! write our hook to the
+	// u32 addr_my_PrepareTitle_hook = ((u32)my_PrepareTitle_hook) | 0x48000003;
+	// DCFlushRange(&addr_my_PrepareTitle_hook, sizeof(addr_my_PrepareTitle_hook));
 
-	SC0x25_KernelCopyData(
-		(u32)&origPrepareTitleInstr,
-		(u32)addr_PrepareTitle_hook, 4);
+	// SC0x25_KernelCopyData(
+	// 	(u32)&origPrepareTitleInstr,
+	// 	(u32)addr_PrepareTitle_hook, 4);
 
-	SC0x25_KernelCopyData(
-		(u32)addr_PrepareTitle_hook,
-		OSEffectiveToPhysical(addr_my_PrepareTitle_hook), 4);
+	// SC0x25_KernelCopyData(
+	// 	(u32)addr_PrepareTitle_hook,
+	// 	OSEffectiveToPhysical(addr_my_PrepareTitle_hook), 4);
 }
 
 

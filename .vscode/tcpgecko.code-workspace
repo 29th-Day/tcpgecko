@@ -4,5 +4,11 @@
 			"path": ".."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"cmake.configureSettings": {
+			"CMAKE_TOOLCHAIN_FILE": "/opt/devkitpro/cmake/WiiU.cmake"
+		},
+		"C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+		"C_Cpp.errorSquiggles": "enabled"
+	}
 }
