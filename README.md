@@ -10,3 +10,5 @@ This should really be a fork but I need to fork aRAMa and therefore I save this 
 **Kinnay** for some `DiiBugger` code this project made use of  
 **CosmoCortney** for the original café code handler  
 **Mewtality** for various code handler improvements
+
+Special thanks to BullyWiiPlaza for crashing complete systems if JGeckoU and a program NAMED "Wireshark.exe" runs at the same time.
