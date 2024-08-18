@@ -2,7 +2,7 @@ This should really be a fork but I need to fork aRAMa and therefore I save this 
 
 # Credits
 **dimok** for the Homebrew Launcher project engine/base  
-**BullyWiiPlaza** for further development of advanced/efficient features of TCP Gecko  
+<!--**BullyWiiPlaza** for further development of advanced/efficient features of TCP Gecko-->
 **wj44** for porting [`pyGecko`](https://github.com/wiiudev/pyGecko) to the Homebrew Launcher and some development  
 **Marionumber1** for exploit development and TCP Gecko Installer contributions  
 **NWPlayer123** for the `pyGecko` client library  
